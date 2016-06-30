@@ -11,7 +11,13 @@ The 2- and 3-feature ANN results are displayed in the correspondingly named tabl
 - Probability of system having an outer transiter (0-1)
 
 ##Hybrid ANN
+As mentioned above, the 3-feature ANN was trained on a binary inner multiplicity flag in addition to planetary radius and orbital period. Put together, the output of this and the 2-feature ANN is:
 
-[A look at the hybrid architecture.](HybridANN.png)
+P = (1-M_inner)*P_ANN2 + M_inner*P_ANN3
 
+where P is the probability of a system having an outer transiter, M_inner = min(N_inner, 1), and N_inner is the number of inner transiters in a system. In this way, the nodes of the hidden layer of ANN2 communicate with the first two features, while those of the hidden layer of ANN3 communicate with the multiplicity flag. 
+
+[Click here for a look at the hybrid ANN architecture, from Kipping & Lam 2016.](HybridANN.png)
+
+##Example Usage
 
