@@ -13,7 +13,7 @@ The 2- and 3-feature ANN results are displayed in the correspondingly named tabl
 ##Hybrid ANN
 As mentioned above, the 3-feature ANN was trained on a binary inner multiplicity flag in addition to planetary radius and orbital period. Put together, the output of this and the 2-feature ANN is:
 ```
-P = (1-M_inner)*P_ANN2 + M_inner*P_ANN3
+P = (1 - M_inner) * P_ANN2 + M_inner * P_ANN3
 ```
 where P is the probability of a system having an outer transiter, 
 ```
