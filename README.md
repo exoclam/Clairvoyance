@@ -24,5 +24,7 @@ and N_inner is the number of inner transiters in a system. In this way, the node
 [Click here for a look at the hybrid ANN architecture, from Kipping & Lam 2016.](HybridANN.png)
 
 ##Usage
-[Click here](hybrid_ann.py) for test case usage of a 2-D interpolant that takes in the radius of a planet in question, its orbital period, and the number of other planets in its system with period less than 13.7 days.
+[Click here](my_planets_probabili.py) to use a 2-D interpolant that takes in the radius of a planet, its orbital period, and the number of planets in its system with period less than 13.7 days.
+
+[Click here](hybrid_ann.py) for the interpolant code. 
 
