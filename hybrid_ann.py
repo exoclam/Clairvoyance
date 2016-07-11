@@ -43,9 +43,9 @@ def output(N_inner, R, P):
     return P_outer
 
 # a few interpolant test cases; note that inputs are unlogged for user convenience
-P_outer3 = output(1, 1.45, 2.23)
-P_outer2 = output(2, 1.33, 1.11)
+P_outer3 = output(2, 4.214, 0.878)
+P_outer2 = output(1, 0.975, 3.065)
 
-#print P_outer3: yields 0.25246384
-#print P_outer2: yields 0.08871049
+#print P_outer3: yields 0.25242456
+#print P_outer2: yields 0.08866211
 #reference ANN3 and ANN2 results, respectively, to see that these are fairly accurate
