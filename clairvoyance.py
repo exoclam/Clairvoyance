@@ -1,13 +1,14 @@
 from hybrid_ann import *
-import sys
-from sys import argv
+import argparse
 
-#print 'Number of arguments:', len(sys.argv), 'arguments.'
-#print 'Argument List:', str(sys.argv)
+parser = argparse.ArgumentParser(description='Predicts probability of outer companion transiter in system.')
+parser.add_argument('-n','--n_inner', help='Number of planets in system with P < 13.7 days', required=True)
+parser.add_argument('-r','--radius', help='Planet radius', required=True)
+parser.add_argument('-p','--period', help='Orbital period', required=True)
 
-script, N_inner, R, P = argv
-N_inner = int(N_inner)
-R = float(R)
-P = float(P)
+args = vars(parser.parse_args())
+N_inner = int(args['n_inner'])
+R = float(args['radius'])
+P = float(args['period'])
 P_outer = output(N_inner, R, P)
-print "Clairvoyance predicts a %f percent probability of additional transiting planets with P > 13.7 days." % (P_outer)
+print "Clairvoyance predicts a %f percent probability of additional transiting planets with P > 13.7 days." % (P_outer) 
