@@ -24,7 +24,7 @@ and N_inner is the number of inner transiters in a system. In this way, the node
 [Click here for a look at the hybrid ANN architecture, from Kipping & Lam 2016.](HybridANN.png)
 
 ##Usage
-[Click here](clairvoyance.py) to use a 2-D interpolant that takes in the radius of a planet, its orbital period, and the number of planets in its system with period less than 13.7 days. On a command line, type: python clairvoyance.py -n=N_inner -r=Radius -p=Period, where the latter three arguments are the eponymous planet features. For example:
+Suppose you have detected a system of 2 transiting planets with periods less than 13.7 days. [Clairvoyance](clairvoyance.py) is a simple 2-D interpolant that takes in the radius of a planet, its orbital period, and the number of planets in its system with period less than 13.7 days. In order to predict the probability of additional transiters in this system with period greater than 13.7 days, clone or download this repository. On a command line, type: python clairvoyance.py -n=N_inner -r=Radius -p=Period, where the latter three arguments are the eponymous planet features. For example, after cloning Clairvoyance:
 ```
 python clairvoyance.py -n=2 -r=4.214 -p=0.878
 >> Clairvoyance predicts a 0.088662 percent probability of additional transiting planets with P > 13.7 days.
