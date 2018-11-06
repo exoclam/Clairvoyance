@@ -10,7 +10,7 @@ The 2- and 3-feature ANN results are displayed in the correspondingly named tabl
 - Log10( Period of maximum sized planets )
 - Probability of system having an outer transiter (0-1)
 
-##Hybrid ANN
+## Hybrid ANN
 As mentioned above, the 3-feature ANN was trained on a binary inner multiplicity flag in addition to planetary radius and orbital period. Put together, the output of this and the 2-feature ANN is:
 ```
 P = (1 - M_inner) * P_ANN2 + M_inner * P_ANN3
@@ -23,7 +23,7 @@ and N_inner is the number of inner transiters in a system. In this way, the node
 
 [Click here for a look at the hybrid ANN architecture, from Kipping & Lam 2016.](HybridANN.png)
 
-##Usage
+## Usage
 [Clairvoyance](clairvoyance.py) is a simple 2-D interpolant that takes in the number of planets in a system with period less than 13.7 days, as well as the maximum radius amongst them (in Earth radii) and orbital period of the planet with maximum radius (in Earth days). Suppose you have just detected a system of N transiting planets with periods less than 13.7 days. In order to predict the probability of additional transiters in this system with period greater than 13.7 days, clone or download this repository. On a command line, type: python clairvoyance.py -n=N -r=R -p=P, where R is the maximum radius amongst the detected inner transiters and P is the orbital period of the planet with the greatest radius amongst them.
 
 For example, consider a 2-inner-planet system, home to Planet 1, with radius of 4.214 Earth radii and orbital period of 0.878 days, and Planet 2, with radius of 2.493 Earth radii and orbital period of 5.682 days. After cloning Clairvoyance, since Planet 1 has the greater radius, its features will be the ones entered into the command line:
